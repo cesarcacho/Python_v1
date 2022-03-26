@@ -67,5 +67,5 @@ while juego != 0:
 
 print("El resultado final es:")
 print("Máquina :", cont_maq, "Jugador :", cont_jug)
-#print("Jugador :", cont_jug)
+
 
