@@ -1,5 +1,6 @@
 import random
 
+
 cont_maq = 0
 cont_jug = 0
 juego = int(input("cuantas partidas quieres jugar ?"))
