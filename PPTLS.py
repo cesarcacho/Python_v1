@@ -8,7 +8,7 @@ juego = int(input("cuantas partidas quieres jugar ?"))
 while juego != 0:
     jugador = input("Elige tu jugada: ")
     
-    maquina = random.randint(1,5)
+    maquina = random.randint(1, 5)
     if maquina == 1:
         contrario = "piedra"
     elif maquina == 2:
@@ -21,7 +21,7 @@ while juego != 0:
         contrario = "spock"
     
     if contrario == jugador:
-        print("Empate!!! Los dos habéis sacado:",jugador)
+        print("Empate!!! Los dos habéis sacado:", jugador)
     elif jugador == "papel":
         if contrario == "piedra" or contrario == "spock":
             print("Has ganado!!!")
@@ -67,5 +67,3 @@ while juego != 0:
 
 print("El resultado final es:")
 print("Máquina :", cont_maq, "Jugador :", cont_jug)
-
-
