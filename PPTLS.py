@@ -1,12 +1,23 @@
 import random
+import time
+import os
 
+def clearConsole():
+    command = 'clear'
+    if os.name in ('nt', 'dos'):  # Si el sistema es Windows, se usa cls
+        command = 'cls'
+    os.system(command)
+
+clearConsole()
 
 cont_maq = 0
 cont_jug = 0
 juego = int(input("cuantas partidas quieres jugar ?"))
 lista=["piedra","papel","tijera","lagarto","spock"]
-winer = juego / 2
+winer = juego / 2     #saber quien ha ganado la 1/2 + 1 (por tanto gana)
+
 while juego != 0:
+    clearConsole()
     jugador = input("Elige tu jugada: ")
     contrario=lista[random.randint(0,4)]
 # Versión original, luego lo mejoramos con la lista[]
@@ -66,13 +77,16 @@ while juego != 0:
     print(contrario)
     juego -= 1
 
+    time.sleep(3)
+
     if cont_jug > winer:
         juego = 0
-        print("Partida GANADA")
+        resultado = "Partida GANADA"
     elif cont_maq > winer:
         juego = 0
-        print("Partida PERDIDA")
+        resultado = "Partida PERDIDA"
 
-
+clearConsole()
+print(resultado)
 print("El resultado final es:")
 print("Máquina :", cont_maq, "Jugador :", cont_jug)
